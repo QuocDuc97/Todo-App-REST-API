@@ -7,11 +7,11 @@ import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository("TodoItemRepository")
-public interface TodoItemData extends JpaRepository<TodoItem, Long> {
+@Repository()
+public interface TodoItemRepository extends JpaRepository<TodoItem, Long> {
 
 
-Optional <TodoItem> findTodoItemByID(Long itemID);
-  List<TodoItem> findListItemID(UUID listID);
+Optional <TodoItem> findByItemID(Long itemID);
+  List<TodoItem> findByListID(UUID listID);
 
 }
