@@ -63,6 +63,11 @@ public class TodoItemService {
     return todoItemRepository.findByListID(listId);
   }
 
+  public List<TodoItem> getAllList(){
+    return todoItemRepository.getList();
+  }
+
+
   //get item
 
   public TodoItem getItem(Long id){
